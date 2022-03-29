@@ -6,10 +6,10 @@
       "value": "eastus"
     },
     "parCompanyPrefix": {
-      "value": "alz"
+      "value": "lab"
     },
     "parHubNetworkName": {
-      "value": "alz-hub-eastus"
+      "value": "lab-hub-eastus"
     },
     "parHubNetworkAddressPrefix": {
       "value": "10.20.0.0/16"
@@ -19,6 +19,10 @@
         {
           "name": "AzureBastionSubnet",
           "ipAddressRange": "10.20.0.0/24"
+        },
+        {
+          "name": "TransitSubnet",
+          "ipAddressRange": "10.20.1.0/24"
         },
         {
           "name": "GatewaySubnet",
@@ -40,7 +44,7 @@
       "value": true
     },
     "parBastionName": {
-      "value": "alz-bastion"
+      "value": "lab-bastion"
     },
     "parBastionSku": {
       "value": "Standard"
@@ -49,13 +53,13 @@
       "value": true
     },
     "parDdosPlanName": {
-      "value": "alz-ddos-Plan"
+      "value": "lab-ddos-Plan"
     },
     "parAzureFirewallEnabled": {
       "value": true
     },
     "parAzureFirewallName": {
-      "value": "alz-azure-firewall"
+      "value": "lab-azure-firewall"
     },
     "parAzureFirewallTier": {
       "value": "Standard"
@@ -64,7 +68,7 @@
       "value": true
     },
     "parHubRouteTableName": {
-      "value": "alz-hub-routetable"
+      "value": "lab-hub-routetable"
     },
     "parDisableBGPRoutePropagation": {
       "value": false
@@ -117,7 +121,7 @@
     },
     "parVpnGatewayConfig": {
       "value": {
-        "name": "alz-Vpn-Gateway",
+        "name": "lab-vpn-gateway",
         "gatewaytype": "Vpn",
         "sku": "VpnGw1",
         "vpntype": "RouteBased",
@@ -136,24 +140,7 @@
       }
     },
     "parExpressRouteGatewayConfig": {
-      "value": {
-        "name": "alz-ExpressRoute-Gateway",
-        "gatewaytype": "ExpressRoute",
-        "sku": "ErGw1AZ",
-        "vpntype": "RouteBased",
-        "generation": "None",
-        "enableBgp": false,
-        "activeActive": false,
-        "enableBgpRouteTranslationForNat": false,
-        "enableDnsForwarding": false,
-        "asn": "65515",
-        "bgpPeeringAddress": "",
-        "bgpsettings": {
-          "asn": "65515",
-          "bgpPeeringAddress": "",
-          "peerWeight": "5"
-        }
-      }
+      "value": {}
     },
     "parTags": {
       "value": {
